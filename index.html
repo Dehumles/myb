@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>B. Makovec</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        .fullscreen-bg {
+            background-image: url('assets/img/homepage.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .content {
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        /* New section for fields */
+        .fields-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 30px;
+}
+.field-box {
+    background-color: rgba(179, 0, 0, 0.85); /* Richer red with slight transparency */
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px; /* Set width for consistency */
+    height: 200px; /* Set height for consistency */
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+.field-box:hover {
+    transform: scale(1.05); /* Hover effect */
+}
+.field-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+.field-box h2 {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+}
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="fullscreen-bg">
+        <!-- New Fields Section at the Top -->
+        <div class="fields-container">
+            <!-- Field 1 with link to prevozi.html -->
+            <a href="prevozi.php">
+                <div class="field-box">
+                    <img src="https://img.icons8.com/ios-filled/60/ffffff/delivery.png" alt="Logistika Icon">
+                    <h2>Logistika in Prevozi</h2>
+                </div>
+            </a>
+            <!-- Field 2 -->
+            <a href="truckservice.php">
+            <div class="field-box">
+                <img src="https://img.icons8.com/ios-filled/60/ffffff/maintenance.png" alt="Servis Vozil Icon">
+                <h2>Servis Vozil</h2>
+            </div>
+          </a>
+
+            <!-- Field 3 -->
+             <a href="warehouse.php">
+            <div class="field-box">
+                <img src="https://img.icons8.com/ios-filled/60/ffffff/warehouse.png" alt="Skladiščenje Icon">
+                <h2>Skladiščenje</h2>
+            </div>
+          </a>
+        </div>
+    </div>
+</body>
+</html>
