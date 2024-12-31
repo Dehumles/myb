@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" rel="stylesheet">
 
 
-  <title>Moderna Bootstrap Template - Index</title>
+  <title>B. Makovec</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -47,15 +47,16 @@
 <main id="main">
   <!-- ======= Services Section ======= -->
   <section class="services">
-    <div class="container">
+    <div class="container text-center">  <!-- Added text-center here -->
       <div class="section-title">
         <h2>Izberite vrsto prevoza</h2>
       </div>
 
-      <div class="row justify-content-center">
+      <!-- FTL/LTL Buttons Section -->
+      <div class="row justify-content-center align-items-center">  <!-- Modified this row -->
         <!-- FTL Section -->
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
-          <div class="icon-box icon-box-pink text-center">
+        <div class="col-lg-4 col-md-6">  <!-- Removed d-flex and mb-5 -->
+          <div class="icon-box icon-box-pink text-center mx-auto" style="max-width: 300px;">  <!-- Added mx-auto and max-width -->
             <div class="icon mb-4">
               <i class="bi bi-truck" style="font-size: 4rem;"></i>
             </div>
@@ -65,8 +66,8 @@
         </div>
 
         <!-- LTL Section -->
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mb-5">
-          <div class="icon-box icon-box-pink text-center">
+        <div class="col-lg-4 col-md-6">  <!-- Removed d-flex and mb-5 -->
+          <div class="icon-box icon-box-pink text-center mx-auto" style="max-width: 300px;">  <!-- Added mx-auto and max-width -->
             <div class="icon mb-4">
               <i class="bi bi-box-seam" style="font-size: 4rem;"></i>
             </div>
@@ -77,18 +78,23 @@
       </div>
 
       <!-- FTL Form (Initially Hidden) -->
+      <div class="container" style="max-width: 800px; margin: 0 auto;">  <!-- Added container for forms -->
+
       <div id="ftlFormContainer" class="row justify-content-center" style="display:none;">
-        <div class="col-lg-8">
-          <div class="card p-5 shadow-lg" style="border-radius: 10px;">
+          <div class="col-12">  <!-- Changed to col-12 -->
+            <div class="card p-5 shadow-lg" style="border-radius: 10px;">
             <h5 class="text-center mb-4" style="font-weight: bold;">Izpolnite podatke za FTL</h5>
             <form id="ftlForm">
               <div class="mb-3">
                 <label for="ftlPickUpCountry" class="form-label">Nakladanje - Izberite državo</label>
                 <select id="ftlPickUpCountry" class="form-select form-control form-control-lg" required>
                   <option value="">Izberite državo...</option>
-                  <option value="Slovenija">Slovenija</option>
-                  <option value="Italija">Italija</option>
+                  <option value="Avstrija">Avstrija</option>
+                  <option value="Francija">Francija</option>
                   <option value="Hrvaška">Hrvaška</option>
+                  <option value="Italija">Italija</option>
+                  <option value="Slovenija">Slovenija</option>
+                  <option value="Španija">Španija</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -98,10 +104,13 @@
               <div class="mb-3">
                 <label for="ftlDropOffCountry" class="form-label">Razkladanje - Izberite državo</label>
                 <select id="ftlDropOffCountry" class="form-select form-control form-control-lg" required>
-                  <option value="">Izberite državo...</option>
-                  <option value="Slovenija">Slovenija</option>
-                  <option value="Italija">Italija</option>
+                <option value="">Izberite državo...</option>
+                <option value="Avstrija">Avstrija</option>
+                  <option value="Francija">Francija</option>
                   <option value="Hrvaška">Hrvaška</option>
+                  <option value="Italija">Italija</option>
+                  <option value="Slovenija">Slovenija</option>
+                  <option value="Španija">Španija</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -116,7 +125,7 @@
                   <option value="Ne">Ne</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Pošlji</button>
+              <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Naslednji korak</button>
             </form>
           </div>
         </div>
@@ -124,17 +133,20 @@
 
       <!-- LTL Form (Initially Hidden) -->
       <div id="ltlFormContainer" class="row justify-content-center" style="display:none;">
-        <div class="col-lg-8">
-          <div class="card p-5 shadow-lg" style="border-radius: 10px;">
+          <div class="col-12">  <!-- Changed to col-12 -->
+            <div class="card p-5 shadow-lg" style="border-radius: 10px;">
             <h5 class="text-center mb-4" style="font-weight: bold;">Izpolnite podatke za LTL</h5>
             <form id="ltlForm">
               <div class="mb-3">
                 <label for="ltlPickUpCountry" class="form-label">Nakladanje - Izberite državo</label>
                 <select id="ltlPickUpCountry" class="form-select form-control form-control-lg" required>
-                  <option value="">Izberite državo...</option>
-                  <option value="Slovenija">Slovenija</option>
-                  <option value="Italija">Italija</option>
+                <option value="">Izberite državo...</option>
+                <option value="Avstrija">Avstrija</option>
+                  <option value="Francija">Francija</option>
                   <option value="Hrvaška">Hrvaška</option>
+                  <option value="Italija">Italija</option>
+                  <option value="Slovenija">Slovenija</option>
+                  <option value="Španija">Španija</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -144,10 +156,13 @@
               <div class="mb-3">
                 <label for="ltlDropOffCountry" class="form-label">Razkladanje - Izberite državo</label>
                 <select id="ltlDropOffCountry" class="form-select form-control form-control-lg" required>
-                  <option value="">Izberite državo...</option>
-                  <option value="Slovenija">Slovenija</option>
-                  <option value="Italija">Italija</option>
+                <option value="">Izberite državo...</option>
+                <option value="Avstrija">Avstrija</option>
+                  <option value="Francija">Francija</option>
                   <option value="Hrvaška">Hrvaška</option>
+                  <option value="Italija">Italija</option>
+                  <option value="Slovenija">Slovenija</option>
+                  <option value="Španija">Španija</option>
                 </select>
               </div>
               <div class="mb-3">
@@ -188,47 +203,55 @@
                   <option value="Ne">Ne</option>
                 </select>
               </div>
-              <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Pošlji</button>
+              <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Naslednji korak</button>
             </form>
           </div>
         </div>
       </div>
 
       <!-- New Contact Info Fields (Initially Hidden) -->
-      <div id="contactInfoContainer" style="display:none;">
-        <form id="contactForm">
-          <div class="mb-3">
-            <label for="companyName" class="form-label">Naziv podjetja</label>
-            <input type="text" class="form-control form-control-lg" id="companyName" placeholder="Vnesite naziv podjetja" required>
+      <div id="contactInfoContainer" class="row justify-content-center" style="display:none;">
+        <div class="col-12">
+          <div class="card p-5 shadow-lg" style="border-radius: 10px;">
+            <h5 class="text-center mb-4" style="font-weight: bold;">Vnesite kontaktne podatke</h5>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="companyName" class="form-label">Naziv podjetja</label>
+                <input type="text" class="form-control form-control-lg" id="companyName" placeholder="Vnesite naziv podjetja" required>
+              </div>
+              <div class="mb-3">
+                <label for="firstName" class="form-label">Ime</label>
+                <input type="text" class="form-control form-control-lg" id="firstName" placeholder="Vnesite ime" required>
+              </div>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Priimek</label>
+                <input type="text" class="form-control form-control-lg" id="lastName" placeholder="Vnesite priimek" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Telefon</label>
+                <input type="tel" class="form-control form-control-lg" id="phone" placeholder="Vnesite telefonsko številko" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control form-control-lg" id="email" placeholder="Vnesite vaš email" required>
+              </div>
+              <div class="mb-3">
+                <label for="contactCountry" class="form-label">Država</label>
+                <select id="contactCountry" class="form-select form-control form-control-lg" required>
+                  <option value="">Izberite državo...</option>
+                  <option value="Avstrija">Avstrija</option>
+                  <option value="Francija">Francija</option>
+                  <option value="Hrvaška">Hrvaška</option>
+                  <option value="Italija">Italija</option>
+                  <option value="Slovenija">Slovenija</option>
+                  <option value="Španija">Španija</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg w-100 mt-4">Pošlji povpraševanje</button>
+            </form>
           </div>
-          <div class="mb-3">
-            <label for="firstName" class="form-label">Ime</label>
-            <input type="text" class="form-control form-control-lg" id="firstName" placeholder="Vnesite ime" required>
-          </div>
-          <div class="mb-3">
-            <label for="lastName" class="form-label">Priimek</label>
-            <input type="text" class="form-control form-control-lg" id="lastName" placeholder="Vnesite priimek" required>
-          </div>
-          <div class="mb-3">
-            <label for="phone" class="form-label">Telefon</label>
-            <input type="tel" class="form-control form-control-lg" id="phone" placeholder="Vnesite telefonsko številko" required>
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control form-control-lg" id="email" placeholder="Vnesite vaš email" required>
-          </div>
-          <div class="mb-3">
-            <label for="contactCountry" class="form-label">Država</label>
-            <select id="contactCountry" class="form-select form-control form-control-lg" required>
-              <option value="">Izberite državo...</option>
-              <option value="Slovenija">Slovenija</option>
-              <option value="Italija">Italija</option>
-              <option value="Hrvaška">Hrvaška</option>
-            </select>
-          </div>
-        </form>
+        </div>
       </div>
-    </div>
   </section><!-- End Services Section -->
 </main>
 
@@ -391,7 +414,19 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ff3d34;
   border-color: #ff3d34;
 }
+.services .icon-box {
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
 
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card {
+    margin-top: 20px;
+}
 
 </style>
 

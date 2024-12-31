@@ -10,7 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" rel="stylesheet">
 
 
-  <title>Moderna Bootstrap Template - Index</title>
+  <title>B. Makovec</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -62,7 +62,6 @@
                     <div class="icon"><i class="bi bi-truck"></i></div>
                     <h4 class="title"><a href="">FTL - Komplet prevozi</a></h4>
                     <p class="description">Storitev FTL je namenjena večjim pošiljkam, kjer je celotno vozilo namenjeno enemu tovoru ali pošiljki.</p>
-                    <button onclick="openPopup()" class="btn btn-primary">Naroči prevoz blaga</button>
                 </div>
             </div>     
                
@@ -95,6 +94,15 @@
 
       </div>
     </section><!-- End Services Section -->
+
+    <section class="cta-section py-5">
+  <div class="container text-center">
+    <a href="transportoffers.php" class="btn btn-cta btn-lg">
+      PRIDOBITE PONUDBO
+      <i class="bi bi-arrow-right-circle ms-2"></i>
+    </a>
+  </div>
+</section>
 
     <!-- ======= Why Us Section ======= -->
     <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
@@ -294,7 +302,32 @@ h1, h2, h3, h4, h5, h6 {
     color: #f2f2f2;
     padding: 40px 0;
 }
+.btn-cta {
+    background: linear-gradient(45deg, #004a7c, #008cba);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 74, 124, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 
+.btn-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 74, 124, 0.4);
+    color: white;
+    background: linear-gradient(45deg, #003a62, #007aa3);
+}
+
+.cta-section {
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
 
 </style>
 

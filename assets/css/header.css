@@ -1,29 +1,30 @@
 /* Custom Styles for Header */
 :root {
-  --shady-red: #8B0000;
-  --light-shady-red: #A52A2A;
-  --off-white: #F8F8F8;
-  --black: #000000;
+  --primary-blue: #004a7c;
+  --dark-text: #2b2b2b;
+  --white: #ffffff;
 }
 
 .navbar {
   transition: all 0.3s ease-in-out;
   padding: 15px 0;
-  background-color: var(--shady-red);
-  margin-bottom: 0; /* Ensure no margin at the bottom */
-  border-bottom: none; /* Remove any border */
+  background-color: var(--white);
+  margin-bottom: 0;
+  border-bottom: none;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--off-white);
+  color: var(--primary-blue);
 }
 
 .navbar-nav .nav-link {
-  font-weight: 600;
-  color: var(--off-white);
-  margin: 0 10px;
+  font-size: 17px;  /* Increased font size */
+  font-weight: 600;  /* Made text bolder */
+  color: var(--dark-text);
+  margin: 0 15px;
   padding: 8px 0;
   position: relative;
   transition: color 0.3s ease;
@@ -36,27 +37,33 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: var(--off-white);
+  background-color: var(--primary-blue);
   transition: width 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--off-white);
+  color: var(--primary-blue);
 }
 
 .navbar-nav .nav-link:hover::after {
   width: 100%;
 }
 
+/* Make the last nav item (Pridobi ponudbe) stand out */
+.navbar-nav .nav-item:last-child .nav-link {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
 .navbar-scrolled {
-  background-color: var(--light-shady-red);
+  background-color: var(--white);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
 }
 
 .navbar-scrolled .navbar-brand,
 .navbar-scrolled .navbar-nav .nav-link {
-  color: var(--off-white);
+  color: var(--dark-text);
 }
 
 .navbar-toggler {
@@ -69,34 +76,119 @@
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(248, 248, 248, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 74, 124, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Button styling */
 .btn-primary {
-  background-color: var(--black);
-  border-color: var(--black);
-  color: var(--off-white);
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--white);
 }
 
 .btn-primary:hover {
-  background-color: var(--off-white);
-  border-color: var(--black);
-  color: var(--black);
+  background-color: var(--white);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
 }
 
 .btn-outline-primary {
-  border-color: var(--black);
-  color: var(--black);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--black);
-  color: var(--off-white);
+  background-color: var(--primary-blue);
+  color: var(--white);
 }
 
 #header {
-  position: absolute;
+  background-color: #004a7c;  /* Dark blue background */
+  padding: 15px 0;
+  position: fixed;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header .navbar {
+  background: transparent;  /* Remove white background */
+  box-shadow: none;  /* Remove shadow */
+  padding: 0;
+}
+
+#header .navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#header .navbar ul li {
+  padding: 0 15px;
+}
+
+#header .navbar ul li a {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;  /* White text */
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+  padding: 5px 0;
+}
+
+#header .navbar ul li a:hover {
+  color: #e6e6e6;  /* Slightly darker white on hover */
+}
+
+/* Underline effect on hover */
+/* Add this to your existing styles */
+#header .navbar ul li .myb-button {
+  font-size: 19px;  /* Bigger than other buttons */
+  font-weight: 700;
+  color: #2ecc71;  /* Nice green color */
+  padding: 8px 15px;
+  border: 2px solid #2ecc71;  /* Green border */
+  border-radius: 5px;
+  margin-left: 15px;
+}
+
+#header .navbar ul li .myb-button:hover {
+  background-color: #2ecc71;  /* Green background on hover */
+  color: white;  /* White text on hover */
+}
+
+/* Remove underline effect for myB button */
+#header .navbar ul li .myb-button::after {
+  display: none;
+}
+
+/* Logo sizing if needed */
+#header .logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+}
+
+/* Add these styles for active state */
+#header .navbar ul li a.active {
+    color: #a8d8ff;  /* Light blue-white shade */
+}
+
+#header .navbar ul li a.active::after {
+    width: 100%;
+    background: #a8d8ff;  /* Match the text color */
+}
+
+/* Don't apply active styles to myB button */
+#header .navbar ul li .myb-button.active {
+    color: #2ecc71;
+    background: transparent;
 }
